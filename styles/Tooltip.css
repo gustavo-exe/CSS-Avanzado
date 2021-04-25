@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+.container{
+    position: relative;
+}
+
+.container:hover .tooltip{
+    opacity: 1;
+    top: -2.75rem;
+}
+
+.tooltip{
+    opacity: 0;
+    top: -2rem;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    transition: opacity 0.25s, top 0.25s;
+}
+.tooltip  .content{
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    /*Para que el texto no salte de linea*/
+    white-space: nowrap;
+}
+.tooltip .triangle{
+    bottom: 0;
+    position: absolute;
+    background-color: #000;
+    width: 10px;
+    height: 10px;
+    transform:translate(-50%, 50%) rotate(45deg);
+    left: 50%;
+}
