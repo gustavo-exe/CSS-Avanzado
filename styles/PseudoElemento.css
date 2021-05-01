@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div{
+    padding: 2rem;
+}
+
+/*Data*/
+.data::before{
+    content: attr(data-code);
+    font-size: 0.8rem;
+    margin-right: 0.2rem;
+}
+
+.data::after{
+    content: attr(data-money);
+    font-weight: 600;
+}
+
+/*Banner*/
+.banner{
+    position: relative;
+    padding: 0;
+    margin: 1rem;
+    color: white;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.banner::before,
+.banner::after{
+    transform: scale(0);
+}
+
+.banner:hover:before,
+.banner:hover::after{
+    transform: scale(1);
+}
+
+
+.banner::before{
+    transition: transform 0.25s;
+    content: attr(data-name);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.banner::after{
+    content: 'Version - ' attr(data-version);
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+    display: flex;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+
+/*Unicode quotes*/
+.quote{
+    quotes: "🤞" "\1F929";
+}
+.quote::before{
+    content: open-quote;
+}
+.quote::after{
+    content: close-quote;
+}
+/*Imagen*/
+.image{
+    display: flex;
+    align-items: center;
+}
+
+.image::before{
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url('https://www.flaticon.es/svg/vstatic/svg/361/361998.svg?token=exp=1619838928~hmac=fb10f58d2cd388333f9965aa6499ea6e');
+    margin-right: 0.5rem;
+}
