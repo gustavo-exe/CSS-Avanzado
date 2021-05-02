@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'slk';
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: local('Silkscreen'), url(./fonts/slkscr-webfont.woff2) format('woff2');
+}
+
+:root{
+    --titulo : 'slk', cursive;
+}
+
+
+h1,h2{
+    font-family: var(--titulo);
+}
