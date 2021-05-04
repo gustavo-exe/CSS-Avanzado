@@ -1,0 +1,37 @@
+body{
+    font-family: sans-serif;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    empty-cells: hide;
+}
+
+tr:not(.tr-head):hover{
+    background: #eee;
+}
+
+thead tr{
+    background: royalblue;
+    color: white;
+}
+
+th{
+    text-align: left;
+}
+
+thead th{
+    border:  none;
+}
+
+td{
+    text-align: right;
+}
+
+td:hover,
+th:not(.th-head):hover{
+    background: #ccc;
+}
+
