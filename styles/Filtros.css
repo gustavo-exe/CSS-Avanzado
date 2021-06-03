@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+div{
+    margin: 0.1rem;
+    width: 500px;
+    height: 100%;
+}
+
+div::before{
+    content: attr(class);
+    display: block;
+    text-align: center;
+}
+
+
+img{
+    width: 100%;
+}
+
+.grayscale img{
+    filter: grayscale(100%);
+}
+
+.sepia img{
+    filter: sepia(100%);
+}
+
+.invert img{
+    filter: invert(40);
+}
+
+.hue-rotate{
+    filter: hue-rotate(0);
+    animation: hue 3s linear infinite;
+}
+
+@keyframes hue {
+    to {
+        filter: hue-rotate(1turn);
+    }
+}
+
+.brightness{
+    filter: brightness(50%);
+    animation: brght 4s linear infinite alternate;
+}
+
+@keyframes brght {
+    to {
+        filter: brightness(200%);
+    }
+}
+
+.contrast{
+filter: contrast(70%);
+}
